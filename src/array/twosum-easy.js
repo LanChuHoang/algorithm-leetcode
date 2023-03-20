@@ -1,11 +1,11 @@
 function twoSum(nums, target) {
-  const map = new Map();
+  const map = {};
   for (let i = 0; i < nums.length; i++) {
     const currentEl = nums[i];
     const toFindEl = target - currentEl;
-    const foundIndex = map.get(toFindEl);
+    const foundIndex = map[toFindEl];
     if (foundIndex !== undefined) return [i, foundIndex];
-    map.set(currentEl, i);
+    map[currentEl] = i;
   }
 }
 
